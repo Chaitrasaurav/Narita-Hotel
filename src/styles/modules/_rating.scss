@@ -1,0 +1,50 @@
+.rating{
+	max-width: $desktop-max-width;
+	margin:0 auto;
+	text-align:center;
+	padding:53px 0;
+	h2{
+		font-size: 20px;
+		color: #000000;
+	}
+	a{
+		border-radius: 100px;
+  		border: solid 1px #aaabae;
+  		font-size: 13px;
+  		color: $text-color-secondary;
+  		display:inline-block;
+  		padding:10px 20px;
+  		text-transform: capitalize;
+  		font-weight:bold;
+  		margin-top:25px;
+	}
+
+	#guide-logo{
+    display: table;
+    margin: 0 auto 30px;
+  }
+	p{
+		max-width: 411px;
+    	margin: 0 auto;
+    	@media (max-width: 767px) {
+    		width:100%;
+    		padding:0 20px;
+    		text-align:left;
+    	}
+	}
+
+}
+.trustscore{
+		display: table !important;
+    margin: 0 auto !important;
+	}
+
+.counter span{
+  display:inline !important;
+  color: #aaabae;
+  font-size:14px;
+}
+.hotel-rating{
+  min-height:43px;
+      margin: 10px 0;
+}

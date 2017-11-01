@@ -1,0 +1,61 @@
+.map{
+	max-width: $desktop-max-width;
+	margin:0 auto;
+	text-align:center;
+	position: relative;
+	padding: 52px 0 40px;
+
+	.hotel-info{
+		position: absolute;
+	    top: 181px;
+	    left: 32px;
+	    background: #fff;
+	    padding: 31px 86px;
+	    @media (max-width: 767px) {
+	    	bottom: 70px;
+    		left: 20px;
+    		padding: 31px 30px;
+    		top:auto;
+	    }
+	    h2{
+	    	font-size:22px;
+	    }
+
+	}
+	.logo{
+		display: block;
+    	margin: 19px 0;
+	}
+	.location-icon{
+		margin: 17px 0 12px;
+	}
+	h2{
+		text-transform: capitalize;
+	}
+	p {
+		margin:0;
+		padding: 0 0 24px;
+		span{
+			display:block;
+		}
+
+	}
+	.contact-info{
+		border-top: 1px solid #dddee0;
+		padding: 25px 0 0;
+    	line-height: 1.8;
+	}
+	iframe{
+		margin:20px 0 0;
+		height: 673px;
+		@media (max-width: 767px) {
+			height:828px;
+		}
+	}
+	.map-container{
+		width: 100%; 
+		overflow: hidden; 
+		margin:20px 0 0;
+	}
+
+}

@@ -1,0 +1,182 @@
+.icon {
+    font-size: 10px;
+}
+
+.icon:before {
+    content:' ';
+    vertical-align:middle;
+    display: inline-block;
+    background-image: url("../svg/sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 16.2em 47.7em;
+}
+
+.no-svg .icon:before {
+    background-image: url("../svg/sprite.png");
+}
+
+
+
+  .icon.add-room:before {
+      background-position: 0em 0em;
+      width: 1em;
+      height: 1em;
+  }
+
+
+
+
+  .icon.arrow:before {
+      background-position: 0em -1em;
+      width: 1.7em;
+      height: 1.4em;
+  }
+
+
+
+
+  .icon.calendar-icon:before {
+      background-position: 0em -2.4em;
+      width: 1.6em;
+      height: 1.6em;
+  }
+
+
+
+
+  .icon.close-btn:before {
+      background-position: 0em -4em;
+      width: 2.8em;
+      height: 2.8em;
+  }
+
+
+
+
+  .icon.close-menu:before {
+      background-position: 0em -6.8em;
+      width: 2em;
+      height: 2em;
+  }
+
+
+
+
+  .icon.confirm-room:before {
+      background-position: 0em -8.8em;
+      width: 1.4em;
+      height: 1em;
+  }
+
+
+
+
+  .icon.delete-icon:before {
+      background-position: 0em -9.8em;
+      width: 2.1em;
+      height: 2.4em;
+  }
+
+
+
+
+  .icon.down-arrow:before {
+      background-position: 0em -12.2em;
+      width: 1.2em;
+      height: 0.7em;
+  }
+
+
+
+
+  .icon.hamburguer-icon:before {
+      background-position: 0em -12.9em;
+      width: 2em;
+      height: 2em;
+  }
+
+
+
+
+  .icon.info-icon:before {
+      background-position: 0em -14.9em;
+      width: 1.4em;
+      height: 1.4em;
+  }
+
+
+
+
+  .icon.location-icon:before {
+      background-position: 0em -16.3em;
+      width: 1.8em;
+      height: 2.6em;
+  }
+
+
+
+
+  .icon.logo:before {
+      background-position: 0em -18.9em;
+      width: 16.2em;
+      height: 8.3em;
+  }
+
+
+
+
+  .icon.logo-mobile:before {
+      background-position: 0em -27.2em;
+      width: 16.2em;
+      height: 3.5em;
+  }
+
+
+
+
+  .icon.phone-icon:before {
+      background-position: 0em -30.7em;
+      width: 1.8em;
+      height: 1.8em;
+  }
+
+
+
+
+  .icon.rate:before {
+      background-position: 0em -32.5em;
+      width: 3.8em;
+      height: 3.8em;
+  }
+
+
+
+
+  .icon.rate-filled:before {
+      background-position: 0em -36.3em;
+      width: 3.8em;
+      height: 3.8em;
+  }
+
+
+
+
+  .icon.star:before {
+      background-position: 0em -40.1em;
+      width: 3.8em;
+      height: 3.8em;
+  }
+
+
+
+
+  .icon.star-filled:before {
+      background-position: 0em -43.9em;
+      width: 3.8em;
+      height: 3.8em;
+  }
+
+
+
+
+

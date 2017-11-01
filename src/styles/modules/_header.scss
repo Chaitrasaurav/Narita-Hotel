@@ -1,0 +1,166 @@
+.hamburguer-icon{
+	position: relative;
+	top: -3px;
+}
+header{
+	border-bottom:1px solid #e5ebef;
+	padding: 14px 0;
+	@media (max-width: 767px) {
+		display: none;
+	}
+	
+	.header_wrapper{
+		max-width: $desktop-max-width;
+		margin:0 auto;
+		@media (max-width: 960px) {
+	  		padding:0 20px
+	  	}
+	}
+
+	ul{
+		font-style: none;
+		li{
+			display: block;
+			float: left;
+			color: $text-color-secondary;
+			a{
+				display:block;
+				margin-right: 27px;
+				color: $text-color-secondary;
+			}
+			&:last-child{
+				a{
+					margin-right:0;
+				}
+			}
+		}
+		&.header_links{
+			float:left;
+			width:auto;
+		}
+		&.header_cta{
+			float:right;
+			width:auto;
+			li:first-child{
+				i{
+					position: relative;
+				    left: -8px;
+				    top: -2px;
+				}
+			}
+		}
+	}
+}
+.header_cta-dropdown{
+		cursor: pointer;
+	    position: relative;
+	    i{
+	    	position: relative;
+    		top: -2px;
+	    }
+	    .header_language{
+	    	padding: 10px;
+    		border: 1px solid #e5ebef;
+    		display:none;
+    		position: absolute;
+		    width: 100px;
+		    right: -10px;
+		    top: 30px;
+		    text-align: center;
+		    background: #ffffff;
+    		li{
+    			float:none;
+    		}
+	    }
+	}
+.mobile-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    z-index: 2;
+}
+
+.mobile-header{
+	display:none;
+	@media (max-width: 767px) {
+		display: block;
+	}
+	.logo-mobile{
+		position: relative;
+    	top: 20px;
+    	left: 20px;
+	}
+	.hamburger{
+		float: right;
+    	margin: 15px 20px;
+    	font-size:16px;
+    	span{
+    		padding: 0 10px;
+    	}
+	}
+}
+.close-mobile-menu{
+	float: right;
+    margin: 14px 20px;
+	span{
+		color: #7b7b85;
+		font-size: 16px;
+		padding: 0 10px;
+	}
+	i{
+		position: relative;
+    	top: -2px;
+	}
+}
+
+.mobile-menu{
+	ul{
+		padding: 40px 20px 20px;
+		list-style: none;
+		li{
+			display:block;
+			padding:10px 0;
+			a{
+				font-size:17px;
+			}
+		}
+	}
+	.mobile-header_links{
+		border-top:1px solid #e5ebef;
+		padding: 20px 20px 40px;
+		li{
+			color:#7b7b85;
+			a{
+				color:#7b7b85;
+			}
+			&:last-child{
+				span{
+					display:block;
+				}
+				a{
+					padding: 10px 7px;
+    				display: block;
+    				i{
+    					position: relative;
+					    top: -5px;
+					    left: -6px;
+    				}
+				}
+			}
+		}
+	}
+	.header_language{
+		position: relative;
+	    width: 100%;
+	    border: none;
+	    text-align: left;
+	    top: 0;
+	    right: 0;
+	    padding: 0 10px;
+	    li{
+	    	padding:10px 0 0;
+	    }
+	}
+}

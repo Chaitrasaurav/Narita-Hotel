@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hotel Narita</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<link rel="stylesheet" type="text/css" href="../dist/styles/vendor.min.css">
+	<link rel="stylesheet" type="text/css" href="../dist/styles/style.min.css">
+	<link rel="stylesheet" type="text/css" href="../dist/sprite/css/sprite.css">
+</head>
+<body class="en" data-locale="en_GB" data-i18n="en">
+	<div class="mobile-header">
+		<i class="icon logo-mobile"></i>
+		<div class="hamburger js-toggle-menu"><span>Menu</span> <i class="icon hamburguer-icon"></i></div>
+		<div class="mobile-menu js-mobile-menu hidden">
+			<i class="icon logo-mobile"></i>
+			<div class="js-close-mobile-menu close-mobile-menu"><span>Close</span> <i class="icon close-menu"></i></div>
+			<ul>
+				<li><a class="js-header-link" href="#attractions">Hotel Attractions</a></li>
+				<li><a class="js-header-link" href="#accommodation">Accommodation</a></li>
+				<li><a class="js-header-link" href="#access">Access</a></li>
+				<li><a class="js-header-link" href="#restaurants">Restaurants &amp; Bars</a></li>
+				<li><a class="js-header-link" href="#guide">Review</a></li>
+				<li><a class="js-header-link" href="#sightseeing">Nearby Hotels</a></li>
+			</ul>
+			<ul class="mobile-header_links">
+				<li><a href="#" target="_blank" data-sheet="headerLink2">Faq</a></li>
+				<li><a href="#" target="_blank" data-sheet="headerLink3">Inquiries</a></li>
+				<li class="header_cta-dropdown">English <i class="icon down-arrow"></i>
+					<ul class="header_language">
+						<li><a href="../ja/index.html">日本語</a></li>
+					</ul>
+				</li>
+				<li><span>Call us</span><a href="tel:81665771111"><i class="icon phone-icon"></i>81 6 6577 1111</a></li>
+			</ul>
+		</div>	
+	</div>
+	
+	<header>
+		<div class="header_wrapper clearfix">
+			<ul class="header_links">
+				<li><a href="#" data-sheet="headerLink1">Home</a></li>
+				<li><a href="#" target="_blank" data-sheet="headerLink2">Faq</a></li>
+				<li><a href="#" target="_blank" data-sheet="headerLink3">Inquiries</a></li>
+			</ul>
+			<ul class="header_cta">
+				<li><a href="tel:81665771111"><i class="icon phone-icon"></i>81 6 6577 1111</a></li>
+				<li class="header_cta-dropdown">English <i class="icon down-arrow"></i>
+					<ul class="header_language">
+						<li><a href="../ja/index.html">日本語</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<section class="stage">
+		<div class="stage_container">	
+			<div class="stage_wrapper">
+				<div class="stage_links clearfix">
+					<ul>
+						<li><a class="js-header-link" href="#attractions">Hotel Attractions</a></li>
+						<li><a class="js-header-link" href="#accommodation">Accommodation</a></li>
+						<li><a class="js-header-link" href="#access">Access</a></li>
+						<li class="logo"><a href="#"><i class="icon logo"></i></a></li>
+						<li><a class="js-header-link" href="#restaurants">Restaurants &amp; Bars</a></li>
+						<li><a class="js-header-link" href="#guide">Review</a></li>
+						<li><a class="js-header-link" href="#sightseeing">Nearby Hotels</a></li>
+					</ul>
+				</div>
+				<div class="stage_content">
+					<h3>Welcome to the Hotel</h3>
+					<h1>Osaka Baytower</h1>
+					<h3><span>The Hotel of most beautiful view of the city</span></h3>
+				</div>
+				<div class="form">
+					<h4>Reservation</h4>
+					<div class="form-container">
+						<form name="mainForm" id="mainForm" class="clearfix" novalidate autocomplete="off">
+							<div class="form__control">
+								<input type="hidden" id="property" name="hotelid" value="98555">
+								<input type="hidden" id="propertyId" value="jpnas28830">
+							</div>
+							<div class="form_guestWrap">
+								<div class="form__control calendar">
+									<i class="icon calendar-icon"></i>
+									<label class="form__label">Check In</label>
+									<div class="input-wrap">
+										<span class="date-container hidden js-date-arrival"></span>
+										<input class="datepicker form__field form__field--sm js-datepicker check-in required" type="text" name="datein" id="checkIn" placeholder="Select" readonly>
+									</div>
+								</div>
+								<div class="form__control calendar">
+									<i class="icon calendar-icon"></i>
+									<label class="form__label">Check Out</label>
+									<div class="input-wrap">
+										<span class="date-container hidden js-date-departure"></span>
+										<input class="datepicker form__field form__field--sm js-datepicker check-out required" type="text" name="dateout" id="checkOut" placeholder="Select" readonly>
+									</div>
+								</div>
+								<div class="datepicker-modal js-datepicker-modal hidden">
+									<div class="datepicker-container js-datepicker-container"></div>
+								</div>
+								<div class="form__control guest-count">
+									<label class="form__label">Guests</label>
+									<div class="input-wrap">
+										<i class="icon down-arrow"></i>
+										<input class="form__field form__field--sm required js-select-guest guest" placeholder="Guests" type="text" value="2" readonly>
+										<input class="form__field form__field--sm js-total-adult" type="hidden" name="adults" id="adults1" value="2">
+										<input class="form__field form__field--sm js-total-children" type="hidden" name="children" id="children1" value="0">
+										<input class="form__field form__field--sm js-total-room" type="hidden" name="rooms" id="rooms" value="1"> 
+										<!-- <input class="form__field form__field--sm" type="hidden" name="locale" id="locale" value="en_GB"> 
+										<input class="form__field form__field--sm" type="hidden" name="currency" id="currency" value="JPY"> -->
+									</div>
+								<div class="select-guest-container js-select-guest-container hidden">
+								<h5>Rooms</h5>
+								<a class="js-cancel-select-guest cancel-select-guest" title="Close" href="javascript:;"><i class="icon close-btn"></i></a>
+								<ul class="js-room-list room-list clearfix" style="list-style: none;padding-left: 0;">
+									<li class="room js-room clearfix" data-room="0">
+										<div class="room-container clearfix">
+											<p class="room__heading">Room1</p>
+											<div class="form__control">
+												<label class="room__label form__label">Adults</label>
+												<div class="input-wrap">
+													<select class="room__field form__field js-adult-count">
+														<option value="1">1</option>
+														<option value="2" selected>2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5">5</option>
+														<option value="6">6</option>
+														<option value="7">7</option>
+													</select>
+												</div>
+											</div>
+											<div class="form__control">
+												<label class="room__label form__label">Children</label>
+												<div class="input-wrap">
+													<select class="room__field form__field js-child-count">
+														<option value="0">0</option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5">5</option>
+														<option value="6">6</option>
+														<option value="7">7</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+								<div class="button-wrap">
+									<button type="button" class="room__add js-add-room">Add Room <i class="icon add-room"></i></button>
+									<button type="button" class="room__confirm js-confirm">Confirm here <i class="icon confirm-room"></i></button>
+								</div>
+							</div>
+								</div>
+							</div>
+							
+							<div class="form__control">
+								<label class="form__label desktop-label">Have a promo code?</label>
+								<label class="form__label mobile-label">Promo code?</label>
+								<div class="input-wrap">
+									<input class="form__field form__field--sm" type="text" name="discount" id="code" placeholder="Optional"><i class="icon info-icon" title="Promotion Code"></i>
+								</div>
+							</div>
+							<button type="button" class="form__btn js-main-form-btn" id="main-form-btn">Check Availability <span>Best Price Guaranteed</span></button>
+						</form>
+					</div>
+				</div>
+				<div class="accommodation" id="accommodation">
+					<h3>Our best rooms</h3>
+					<h2>Accommodations</h2>
+					<ul class="accommodation_slider js-accomodation">
+					</ul>
+					<a href="#" class="see-all">see all accommodations</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section class="rating" id="guide">
+		<div id="guide-logo"></div>
+		<p>"Very good business hotel. Close to Universal Studios. Easily accessible by car and also close to train stations. Great rooms and fantastic service."</p>
+		<a href="https://api.trustyou.com/hotels/93ed65c2-4b3f-4101-a7a0-d149aedf852e/meta_review.html?lang=en&iframe_resizer=true" target="_blank">Read reviews</a>
+	</section>
+	<section class="tabs" id="restaurants">
+		<div class="tabs_container">
+			<h3>Our facilities</h3>
+			<h2>Restaurants, Bars &amp; More</h2>
+			<div class="tabs-wrap">
+				<ul class="tabs-list js-tabs">
+					<li class="tab-link current" data-tab="tab-1">Restaurants</li>
+					<li class="tab-link" data-tab="tab-2">Lounge &amp; bars</li>
+					<li class="tab-link" data-tab="tab-3">Omsen &amp; spa</li>
+					<li class="tab-link" data-tab="tab-4">Hotel shop</li>
+					<li class="tab-link" data-tab="tab-5">Banquets</li>
+				</ul>
+				<select class="tabs-select js-tabs-select">
+					<option value="tab-1">Restaurants</option>
+					<option value="tab-2">Lounge &amp; bars</option>
+					<option value="tab-3">Omsen &amp; spa</option>
+					<option value="tab-4">Hotel shop</option>
+					<option value="tab-5">Banquets</option>
+				</select>
+				<div id="tab-1" class="tab-content current">
+					<ul class="accommodation_slider js-tab-slider" data-type="restaurant">
+						<li>
+							<img src="../dist/images/air-ship.png">
+							<h3>Air Ship</h3>
+							<h5>Sky Lounge</h5>	
+							<p>Located in the 51st Floor <span class="open">Open until 11:00 pm</span></p>
+							<a href="#">More Info</a>
+						</li>
+						<li>
+							<img src="../dist/images/isokaze.png">
+							<h3>Isokaze</h3>
+							<h5>Japanese Restaurant</h5>	
+							<p>Located in the 20th Floor <span class="closed">Closed</span></p>
+							<a href="#">More Info</a>
+						</li>
+						<li>
+							<img src="../dist/images/ruri.png">
+							<h3>Ruri</h3>
+							<h5>Teppanyaki Restaurant</h5>	
+							<p>Located in the 20th Floor <span class="open">Open until 11:00 pm</span></p>
+							<a href="#">More Info</a>
+						</li>
+						<li>
+							<img src="../dist/images/ruri.png">
+							<h3>Ruri</h3>
+							<h5>Teppanyaki Restaurant</h5>	
+							<p>Located in the 20th Floor <span class="open">Open until 11:00 pm</span></p>
+							<a href="#">More Info</a>
+						</li>
+					</ul>
+				</div>
+				<div id="tab-2" class="tab-content">
+					<ul class="accommodation_slider js-tab-slider" data-type="bar">
+						<li>
+							<img src="../dist/images/air-ship.png">
+							<h3>Air Ship</h3>
+							<h5>Sky Lounge</h5>	
+							<p>Located in the 51st Floor <span class="open">Open until 11:00 pm</span></p>
+							<a href="#">More Info</a>
+						</li>
+						<li>
+							<img src="../dist/images/lobby-lounge.png">
+							<h3>Lobby Lounge</h3>
+							<h5>Café</h5>	
+							<p>Located in the 20th Floor <span class="closed">Closed</span></p>
+							<a href="#">More Info</a>
+						</li>
+					</ul>
+				</div>
+				<div id="tab-3" class="tab-content">
+					<div class="spa clearfix" data-type="spa">
+						<ul class="spa-slider js-tab-slider-inner">
+							<li><img src="../dist/images/spa-image.png" /></li>
+							<li><img src="../dist/images/spa-image.png" /></li>
+							<li><img src="../dist/images/spa-image.png" /></li>
+							<li><img src="../dist/images/spa-image.png" /></li>
+							<li><img src="../dist/images/spa-image.png" /></li>
+							<li><img src="../dist/images/spa-image.png" /></li>
+						</ul>
+						<div class="spa-content">
+							<h3>MyStays Fuji Onsen</h3>
+							<p class="spa-info">Natural hot spring offer starting in October 2017! A resort hotel featuring a panoramic view of Mount Fuji.</p>
+							<p>Hotel Mystays Fuji Onsen Resort features large natural hot spring communal baths with panoramic views and open-air baths, where our guests spend luxurious moments viewing Mount Fuji, a World Heritage Site.</p>
+							<a href="#">Read More</a>
+						</div>
+					</div>
+				</div>
+				<div id="tab-4" class="tab-content">
+					<div class="hotel-shop clearfix" data-type="shop">
+						<div class="hotel-shop-image">
+							<img src="../dist/images/hotel-shop.png" />
+						</div>
+						<div class="hotel-shop-content">
+							<h3>Hotel Shop</h3>
+							<p class="shop-info">The hotel shop of Hotel Osaka Bay Tower carries a variety of items, including the hotel’s original goods.</p>
+							<p><span>Hours:</span> 8:00 – 19:00</p>
+							<p><span>Location:</span> Next to the lobby lounge on 1F</p>
+							<p><span>Items carried:</span> Hotel Osaka Bay Tower’s original goods, bottled beverages, batteries, special gift envelopes, formal ties, handkerchiefs, stockings, disposable umbrellas, pocket snacks, sweets for gifts, etc.</p>
+							<div class="hotel-shop-disclaimer"><span>i</span> *Please note that the range of items is subject to change without notice and certain items may be out of stock.</div>
+						</div>
+					</div>
+				</div>
+				<div id="tab-5" class="tab-content">
+					<ul class="accommodation_slider js-tab-slider" data-type="banquet">
+						<li>
+							<img src="../dist/images/parturient.png">
+							<h3>Parturient Pharetra Risus</h3>
+							<h5>Max. Capacity: 250</h5>	
+							<p>2-6-8, Nishigotanda, Shinagawa-ku, Tokyo<br/>141-0031, Japan  |  03-6743-6572</p>
+							<a href="#">Contact Us</a>
+						</li>
+						<li>
+							<img src="../dist/images/nullam.png">
+							<h3>Nullam Nibh Vehicula</h3>
+							<h5>Max. Capacity: 250</h5>	
+							<p>2-6-8, Nishigotanda, Shinagawa-ku, Tokyo<br/>141-0031, Japan  |  03-6743-6572</p>
+							<a href="#">Contact Us</a>
+						</li>
+						<li>
+							<img src="../dist/images/dapibus.png">
+							<h3>Dapibus Amet Condimentum</h3>
+							<h5>Max. Capacity: 250</h5>	
+							<p>2-6-8, Nishigotanda, Shinagawa-ku, Tokyo<br/>141-0031, Japan  |  03-6743-6572</p>
+							<a href="#">Contact Us</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="gallery" id="attractions">
+		<div class="gallery_container">
+			<h3>Around the hotel</h3>
+			<h2>Photo gallery</h2>
+			<ul class="masonry-gallery">
+				<li class="first-set clearfix">
+					<div class="left">
+						<a class="fancybox-thumb first-image" rel="fancybox-thumb" href="../dist/images/poison-ivy-leaf-summer-big-56a584655f9b58b7d0dd412a.jpg"><img src="../dist/images/photo-1.png"></a>
+					</div>
+					<div class="right">
+						<div class="top">
+							<div class="top-left">
+								<a class="fancybox-thumb" rel="fancybox-thumb" href="../dist/images/photo-2.png"><img src="../dist/images/photo-2.png"></a>
+								<div class="top-left-columns clearfix">
+									<div class="top-left-columns-left">
+										<a class="fancybox-thumb" rel="fancybox-thumb" href="../dist/images/photo-3.png"><img src="../dist/images/photo-3.png"></a>
+									</div>
+									<div class="top-left-columns-right">
+										<a class="fancybox-thumb" rel="fancybox-thumb" href="../dist/images/photo-4.png"><img src="../dist/images/photo-4.png"></a>
+									</div>
+								</div>																
+							</div>
+							<div class="top-right">
+								<a class="fancybox-thumb" rel="fancybox-thumb" href="../dist/images/photo-5.png"><img src="../dist/images/photo-5.png"></a>
+							</div>
+						</div>
+						<div class="bottom">
+							<div class="bottom-image">
+								<a class="fancybox-thumb" rel="fancybox-thumb" href="../dist/images/photo-6.png"><img src="../dist/images/photo-6.png"></a>
+							</div>
+							<div class="bottom-image">
+								<a class="fancybox-thumb" rel="fancybox-thumb" href="../dist/images/photo-7.png"><img src="../dist/images/photo-7.png"></a>
+							</div>
+							<div class="bottom-image">
+								<a class="fancybox-thumb" rel="fancybox-thumb" href="../dist/images/photo-8.png"><img src="../dist/images/photo-8.png"></a>
+							</div>
+						</div>
+					</div>													
+				</li>				
+			</ul>    
+			<a class="more-photos js-more-photos">Load more photos</a>
+		</div>
+	</section>
+	<section class="map" id="access">
+		<h3>Find us</h3>
+		<h2>Our location</h2>
+		<div class="hotel-info">
+			<i class="icon logo"></i>
+			<i class="icon location-icon"></i>
+			<h2>our location</h2>
+			<p>ORC200, 1-2-1 Benten, Minato-ku, <span>Osaka 552-0007</span></p>
+			<p class="contact-info">Tel: <a href="tell:8166577-1111">+81-6-6577-1111</a><br/>
+			Fax: +81-6-6576-5155<br/>
+			Email: <a href="mailto:info@domain.com">info@domain.com</a></p>
+		</div>
+		<div class="map-container">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.3899816839767!2d135.45887777415402!3d34.67010569581174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e632218a402d%3A0xaebd7ce3ae49c5d!2sHotel+Osaka+Bay+Tower!5e0!3m2!1sen!2sin!4v1507049614394" width="100%" height="100%" frameborder="0" style="border:0; margin-top: -150px;" allowfullscreen></iframe>
+		</div>
+	</section>
+	<section class="nearby-places" id="sightseeing">
+		<h3>Other MyStays</h3>
+		<h2>Nearby Hotels</h2>
+		<ul class="accommodation_slider js-nearbuy">
+			<li data-hotel="jposa28306">
+				<img src="../dist/images/room-image.png">
+				<h3>HOTEL MYSTAYS <br/>Shinsaibashi East</h3>
+				<div id="shinsaibashiEast" class="hotel-rating"></div>
+				<p class="spinner js-spinner"><span>Starting from:</span> <span class="js-nearbuy-price">£39.00</span><span>/ Night</span></p>
+				<a href="#" class="js-book-now">Book Now</a>
+			</li>
+			<li data-hotel="jposa26338">
+				<img src="../dist/images/room-image.png">
+				<h3>HOTEL MYSTAYS <br/>Shinsaibashi</h3>
+				<div id="shinsaibashi" class="hotel-rating"></div>
+				<p class="spinner js-spinner"><span>Starting from:</span> <span class="js-nearbuy-price">£39.00</span><span> / Night</span></p>
+				<a href="#" class="js-book-now">Book Now</a>
+			</li>
+			<li data-hotel="jposa31260">
+				<img src="../dist/images/room-image.png">
+				<h3>HOTEL MYSTAYS <br/>Midosuji Honmachi</h3>
+				<div class="hotel-rating"></div>
+				<p class="spinner js-spinner"><span>Starting from:</span> <span class="js-nearbuy-price">£39.00</span><span> / Night</span></p>
+				<a href="#" class="js-book-now">Book Now</a>
+			</li>
+		</ul>
+		<a href="#" class="see-all">See more hotels</a>
+	</section>
+ 	<footer>
+ 		<div class="footer_container">
+ 			<i class="icon logo"></i>
+ 			<ul>
+ 				<li><a href="#">Home</a></li>
+ 				<li><a href="#">Faq</a></li>
+ 				<li><a href="#">Inquiries</a></li>
+ 			</ul>
+ 			<p>© 2014 GRANVISTA Hotels&amp;Resorts co.,Ltd. All Rights Reserved.</p>
+ 		</div>
+ 	</footer>
+	<script type="text/javascript" src="../dist/scripts/vendor.js"></script>
+	<script type="text/javascript" src="../data/data-en.js"></script>
+	<!-- <script type="text/javascript" src="../dist/scripts/app.min.js"></script> -->
+	<script type="text/javascript" src="../scripts/main.js"></script>
+</body>
+</html>
