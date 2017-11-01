@@ -827,7 +827,7 @@ $(document).on('click', '.js-book-now', function(e) {
 	now.setHours(0,0,0,0);
 	if (now < selectedDate) {
 	  	date1 = new Date(2018, 1, 1);
-		date2 = new Date(2018, 1, 1);
+		date2 = new Date(2018, 1, 2);
 	} else {
 		date1 = new Date();
 		date2 = new Date();
