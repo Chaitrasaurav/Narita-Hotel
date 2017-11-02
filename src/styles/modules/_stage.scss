@@ -6,11 +6,11 @@
     background: linear-gradient(#ffffff, #f2f5f7); /* Standard syntax */
 }
 .stage_container{
-	background: url(../images/stage-image.png) no-repeat top center;
+	background: url(../images/stage-image.jpg) no-repeat top center;
 	background-size: 100% 628px;
 	
     @media (max-width: 767px) {
-    	background: url(../images/stage-image-mobile.png) no-repeat top -55px center;
+    	background: url(../images/stage-image.jpg) no-repeat top -55px center;
     	background-size: 100% 495px;
     }
 }

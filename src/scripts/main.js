@@ -1,12 +1,15 @@
 'use strict';
 var propertyId,
-	property,
+	property,	
 	locale;
+
+var lanId = $('body').data('lang');
 
 function init() {
     propertyId = $('#propertyId').val(),
     property = $('#property').val();
-    locale = $('body').data('locale');
+    locale = $('body').data('locale');   
+    
 
     function gotoDate(month, year) {
 	    $(".js-datepicker-container").each(function (i, el) {
@@ -197,18 +200,18 @@ function init() {
 
     var inDateObj = new Date(),
     	inMonth = (inDateObj.getMonth() + 1) < 10 ?  '0' + (inDateObj.getMonth() + 1) : (inDateObj.getMonth() + 1),
-    	inDate = inDateObj.getDate() < 10 ?  '0' + inDateObj.getDate() : inDateObj.getDate(),
+    	inDate = inDateObj.getDate() < 10 ?  '0' + (inDateObj.getDate() +1) : inDateObj.getDate(),
     	currentDate = inDateObj.getFullYear() + '-' + inMonth + '-' + inDate,
     	outDateObj = new Date();
 
    	outDateObj.setDate(new Date().getDate() + 1);
     var	outMonth = (outDateObj.getMonth() + 1) < 10 ?  '0' + (outDateObj.getMonth() + 1) : (outDateObj.getMonth() + 1),
-    	outDate = outDateObj.getDate() < 10 ?  '0' + outDateObj.getDate() +  1 : outDateObj.getDate(),
+    	outDate = outDateObj.getDate() < 10 ?  '0' + (outDateObj.getDate() +  1) : outDateObj.getDate(),
     	nextDate = outDateObj.getFullYear() + '-' + outMonth + '-' + outDate;
 
     //var url = 'http://dev.mystays.net.smartosc.com/api/mystays/Pricing/GetHotelPrice?hotelid=98555&checkin=' + currentDate + '&checkout=' + nextDate + '&adults=2&child=0&rooms=1';
     //var url = 'https://dev.mystays.net.smartosc.com/api/mystays/Pricing/GetHotelPrice?hotelid=98555&checkin=2017-11-02&checkout=2017-11-05&adults=2&child=0&rooms=1';
-    var url = 'http://dev.mystays.net.smartosc.com/api/mystays/Pricing/GetHotelPrice?hotelid=98555&checkin=' + currentDate + '&checkout=' + nextDate + '&adults=2&child=0&rooms=1';
+    var url = 'http://dev.mystays.net.smartosc.com/api/mystays/Pricing/GetHotelPrice?hotelid=' + property + '&checkin=' + currentDate + '&checkout=' + nextDate + '&language=' + locale + '&adults=2&child=0&rooms=1';
  //    var response = {
 	//   "propertyname": "Hotel Mystays Haneda",
 	//   "rooms": [
@@ -918,7 +921,7 @@ $(".fancybox-thumb").fancybox({
 	});
 
 function getReviews(id, key){
-	var url = 'https://api.trustyou.com/hotels/' + key + '/trust_score.html?embedded=true&lang=en&size=m';
+	var url = 'https://api.trustyou.com/hotels/' + key + '/trust_score.html?embedded=true&lang='+ lanId +'&size=m';
 	
 	$.ajax({url: url, success: function(result){
 		$(id).append($(result).find('.counter'));
@@ -930,7 +933,10 @@ function getReviews(id, key){
 getReviews('#shinsaibashiEast', '487c3a95-0204-4b24-b3d8-07bb42db12fc');
 getReviews('#shinsaibashi', 'b5c6981a-016b-436e-95a6-85041532bdcb');
 
-$.ajax({url: 'https://api.trustyou.com/hotels/93ed65c2-4b3f-4101-a7a0-d149aedf852e/trust_score.html?embedded=true&lang=en&size=m', success: function(result){
+
+
+
+$.ajax({url: 'https://api.trustyou.com/hotels/93ed65c2-4b3f-4101-a7a0-d149aedf852e/trust_score.html?embedded=true&lang='+ lanId +'&size=m', success: function(result){
 	$('#guide-logo').append(result);
 }});
 
