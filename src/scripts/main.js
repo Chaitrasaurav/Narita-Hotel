@@ -211,7 +211,7 @@ function init() {
 
     //var url = 'http://dev.mystays.net.smartosc.com/api/mystays/Pricing/GetHotelPrice?hotelid=98555&checkin=' + currentDate + '&checkout=' + nextDate + '&adults=2&child=0&rooms=1';
     //var url = 'https://dev.mystays.net.smartosc.com/api/mystays/Pricing/GetHotelPrice?hotelid=98555&checkin=2017-11-02&checkout=2017-11-05&adults=2&child=0&rooms=1';
-    var url = 'http://dev.mystays.net.smartosc.com/api/mystays/Pricing/GetHotelPrice?hotelid=' + property + '&checkin=' + currentDate + '&checkout=' + nextDate + '&language=' + locale + '&adults=2&child=0&rooms=1';
+    var url = 'http://mystays.figns.io/api/mystays/Pricing/GetHotelPrice?hotelid=' + propertyId + '&checkin=' + currentDate + '&checkout=' + nextDate + '&language=' + locale + '&adults=2&child=0&rooms=1';
  //    var response = {
 	//   "propertyname": "Hotel Mystays Haneda",
 	//   "rooms": [
@@ -378,16 +378,16 @@ function init() {
     	var $ele = $('.js-nearbuy'),
 	    	nearBuyList = [
 				{
-					property: 'jposa28306',
-					beName: 'Renovated-Standard-Single--Non-S'	
+					property: 'jpura26317',
+					beName: 'Twin-Non-Smoking'	
 				},
 				{
-					property: 'jposa26338',
-					beName: 'Standard-Semi-double-Non-Smoking'	
+					property: 'jpura26309',
+					beName: 'Single-Non-Smoking'	
 				},
 				{
-					property: 'jposa31260',
-					beName: 'Standard-Double'	
+					property: 'jpura26342',
+					beName: 'Superior-Semi-Double-Non-Smoking'	
 				}
 			],
 			roomsLength = nearBuyList.length,
@@ -930,13 +930,13 @@ function getReviews(id, key){
 
     }});
 }
-getReviews('#shinsaibashiEast', '487c3a95-0204-4b24-b3d8-07bb42db12fc');
-getReviews('#shinsaibashi', 'b5c6981a-016b-436e-95a6-85041532bdcb');
+getReviews('#maihama', '259a4e86-e00b-4e93-8325-e09048339c7a');
+getReviews('#conference', '48921673-c222-4d22-b3fa-196b7d4d045f');
+getReviews('#flexstay', 'a9a109e3-56b9-41cd-880e-fd20ddb576f9');
 
 
 
-
-$.ajax({url: 'https://api.trustyou.com/hotels/93ed65c2-4b3f-4101-a7a0-d149aedf852e/trust_score.html?embedded=true&lang='+ lanId +'&size=m', success: function(result){
+$.ajax({url: 'https://api.trustyou.com/hotels/58be015a-8c2d-46ed-94e6-e92b32e156e3/trust_score.html?embedded=true&lang='+ lanId +'&size=m', success: function(result){
 	$('#guide-logo').append(result);
 }});
 

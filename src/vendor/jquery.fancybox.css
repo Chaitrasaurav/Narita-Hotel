@@ -74,9 +74,6 @@
 	width: auto;
     height: auto;
     margin:0 auto;
-    max-height:700px;
-    max-width:700px;
-
 }
 @media (max-width: 767px) {
 	.fancybox-image {

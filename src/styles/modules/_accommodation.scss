@@ -22,7 +22,7 @@
 			background: #ffffff;
   			box-shadow: 0 0 15px 0 rgba(0, 60, 103, 0.1);
   			margin:0 10px;
-  			padding:0 0 50px;
+  			padding:15px 15px 50px;
   			@media (max-width: 600px) {
   				margin:0 15px 0 0;
   				opacity:0.5;
@@ -46,8 +46,8 @@
   				&:after{
   					content: '';
   					position: absolute;
-  					top: -52px;
-  					left:48%;
+  					top: -39px;
+  					left:48%; 
   					width: 0; 
 				    height: 0; 
 				    border-left: 10px solid transparent;
@@ -271,7 +271,7 @@
   				&:after{
   					content: '';
   					position: absolute;
-  					top: -52px;
+  					top: -39px;
   					left:48%;
   					width: 0; 
 				    height: 0; 

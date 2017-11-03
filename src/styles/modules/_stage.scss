@@ -10,12 +10,12 @@
 	background-size: 100% 628px;
 	
     @media (max-width: 767px) {
-    	background: url(../images/stage-image.jpg) no-repeat top -55px center;
+    	background: url(../images/stage-image-mobile.jpg) no-repeat top 0 center;
     	background-size: 100% 495px;
     }
 }
 .stage_wrapper{
-	max-width: $desktop-max-width;
+	max-width: $desktop-max-width; 
 	margin:0 auto;
 	padding: 0 0 59px;
 	@media (max-width: 960px) {
@@ -63,10 +63,10 @@
 		}
 	}
 	.stage_content{
-		max-width:547px;
+		max-width:600px;
 		margin:0 auto;
 		text-align:center;
-		padding-top: 27px;
+		padding-top: 0;
 		@media (max-width: 767px) {
 			padding: 60px 20px 0;
 		}
@@ -128,6 +128,7 @@
 		}
 		h1{
 			margin: -3px 0 8px;
+			line-height: 1;
 			@media (max-width: 767px) {
 				margin:20px 0;
 			}
