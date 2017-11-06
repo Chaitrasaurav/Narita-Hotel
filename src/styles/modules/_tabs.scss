@@ -31,15 +31,18 @@
 		margin: 22px 0 0;
 		min-height: auto;
 	}
+	.accommodation_slider .slick-list li{
+		position: relative;
+	}
 	.accommodation_slider .slick-list li a{
 		margin: 17px 0 0;
 		border: solid 1px #aaabae;
 		background: none;
 		color: #7b7b85;
-		font-weight: bold;
+		font-weight: bold;		
 	}
 	.accommodation_slider .slick-list li h3:after{
-		top: -45px;
+		top: -31px;
 	}
 	.tabs-list{
 		margin: 0px;
@@ -206,20 +209,33 @@
 			padding:0 20px;
 		}
 		.spa-slider{
-			float: left;
-    		width: 41%;
-    		margin: 38px 0 0 0;
+    		padding: 38px 0 0 0;
+    		margin: 0;
     		position:relative;
+    		width: 100%;
+    		float: left;
+			.spa-slider-image{
+				float: left;
+    			width: 41%;
+    			@media (max-width: 767px) {
+    				width: 100%;
+    				float: none;
+    			}
+			}
     		img{
     			max-width:100%;
     			display:block;
-    		}
-    		@media (max-width: 767px) {
-    			float:none;
-    			width:100%;
-    		}
+    			height: auto;
+    		}    		
     		.custom_paging{
-    			margin-top: 15px;
+    			margin-top: 0;
+    			width: 41%;
+    			float: left;
+    			@media (max-width: 767px) {
+    				width: 100%;
+    				position: absolute;
+    				top: 265px;
+    			}
     			li{
     				display:none;
     				color: #2f3e63;   				
@@ -232,15 +248,22 @@
 				color: #2f3e63;
 				top:auto;
 				font-size:14px;
+				z-index: 1;
 				&:before{
 					font-size:10px !important;
 				}
 			}
 			.slick-next{
-				right: 0;
+				left:32%;
     			width: 85px;
     			bottom:10px;
-    			&:before{
+    			@media (max-width: 767px) {
+    				right: 0;
+    				bottom: auto;
+    				top: 265px;
+    				left: auto;
+    			}
+    			&:before{ 
     				top: 4px;
     				position:absolute;
     				right:0;
@@ -257,6 +280,10 @@
 				bottom:10px;
 				transform: none;
 				width:100px;
+				@media (max-width: 767px) {
+    				bottom: auto;
+    				top: 265px;
+    			}
 				&:before{
 					-ms-transform: rotate(180deg);
     				-webkit-transform: rotate(180deg);
@@ -276,11 +303,11 @@
 		.spa-content{
 			float: right;
 		    width: 56%;
-		    margin: 41px 0 0;
 		    text-align: left;
 		    @media (max-width: 767px) {
     			float:none;
     			width:100%;
+    			margin-top: 40px;
     		}
 			h3{
 		    	color: #222d49;
@@ -290,21 +317,47 @@
 		    }
 		    p{
 		    	font-size:14px;
+		    	font-family: $font-family-secondary;
+		    	span{
+		    		font-weight:bold;
+		    	}
 		    }
 		    .spa-info{
 	    		padding-bottom:20px;
 	    		border-bottom:1px solid #dddee0;
 	    		font-family: $font-family-secondary;
 	    	}
-	    	a{
-	    		display:inline-block;
-	    		border-radius: 100px;
-  				border: solid 1px #222d49;	
-  				padding:10px 20px;
-  				font-size: 13px;
-  				font-weight: bold;
-  				margin-top:15px;
-	    	}
+	    	.hotel-spa-disclaimer{
+	    		color: #a2a6ae;
+	    		font-family: $font-family-primary;
+	    		font-size: 12px;
+  				line-height: 1.42;
+  				margin-top:20px;
+  				span{
+  					display: block;
+				    width: 30px;
+				    height: 30px;
+				    border: 1px solid #a2a6ae;
+				    border-radius: 100px;
+				    padding: 5px 13px;
+				    font-size: 14px;
+				    float: left;
+				    margin: 0 10px 0 0;
+  				}
+	    	}	    	
 		}
 	}
+}
+
+#tab-4 .accommodation_slider .slick-list li{
+	height: 450px;
+}
+
+#tab-4 .accommodation_slider .slick-list li a{
+	position: absolute;
+	bottom: 25px;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
 }

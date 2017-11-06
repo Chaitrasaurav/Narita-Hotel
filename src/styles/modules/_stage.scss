@@ -10,7 +10,7 @@
 	background-size: 100% 628px;
 	
     @media (max-width: 767px) {
-    	background: url(../images/stage-image-mobile.jpg) no-repeat top 0 center;
+    	background: url(../images/stage-image-mobile.jpg) no-repeat top -62px center;
     	background-size: 100% 495px;
     }
 }
@@ -28,18 +28,16 @@
 		}
 		ul{
 			list-style: none;
-			display: table;
-    		margin: 0 auto;
+			display: block;
+    		margin: 0;
 			li{
 				display: block;
 				float:left;
+				width: 13%;
+				text-align: center;
 				a{
-					display:block;
-					margin-right: 34px;	
-					@media (max-width: 960px) {
-						margin-right:15px;
-						margin-right:10px;
-					}	
+					display:block;		
+					font-size: 13px;				
 					@media (max-width: 830px) {
 						font-size: 13px;
 
@@ -53,11 +51,14 @@
 						margin-right:0;
 					}
 				}
+				&.logo{
+					width: 22%;
+				}
 			}
 			.logo{
-				margin: -16px 7px 0 17px;
+				margin: -16px 0 0 0;
 				@media (max-width: 960px) {
-				    margin: -16px 5px 0 5px;
+				    margin: -16px 0 0 0;
 				}	
 			}
 		}
@@ -111,20 +112,20 @@
 					top:14px;
 				}
 			}
-			&:last-child{
-				&:after{
-					width:53px;
-					@media (max-width: 767px) {
-						width:30px;
-					}
-				}
-				&:before{
-					width:53px;
-					@media (max-width: 767px) {
-						width:30px;
-					}
-				}
-			}
+			// &:last-child{
+			// 	&:after{
+			// 		width:53px;
+			// 		@media (max-width: 767px) {
+			// 			width:30px;
+			// 		}
+			// 	}
+			// 	&:before{
+			// 		width:53px;
+			// 		@media (max-width: 767px) {
+			// 			width:30px;
+			// 		}
+			// 	}
+			// }
 		}
 		h1{
 			margin: -3px 0 8px;

@@ -19,6 +19,9 @@ footer{
 			display:block;
 			float:left;
 			padding:0 10px;
+			@media (max-width: 767px) {
+				float: none;
+			}
 			a{
 				color: $text-color-secondary;
 			}

@@ -211,7 +211,7 @@ function init() {
 
     //var url = 'http://dev.mystays.net.smartosc.com/api/mystays/Pricing/GetHotelPrice?hotelid=98555&checkin=' + currentDate + '&checkout=' + nextDate + '&adults=2&child=0&rooms=1';
     //var url = 'https://dev.mystays.net.smartosc.com/api/mystays/Pricing/GetHotelPrice?hotelid=98555&checkin=2017-11-02&checkout=2017-11-05&adults=2&child=0&rooms=1';
-    var url = 'http://mystays.figns.io/api/mystays/Pricing/GetHotelPrice?hotelid=' + propertyId + '&checkin=' + currentDate + '&checkout=' + nextDate + '&language=' + locale + '&adults=2&child=0&rooms=1';
+    var url = 'https://mystays.figns.io/api/mystays/Pricing/GetHotelPrice?hotelid=' + propertyId + '&checkin=' + currentDate + '&checkout=' + nextDate + '&language=' + locale + '&adults=2&child=0&rooms=1';
  //    var response = {
 	//   "propertyname": "Hotel Mystays Haneda",
 	//   "rooms": [
@@ -357,7 +357,7 @@ function init() {
 					<img src="../dist/images/room-image.png">\
 					<h3>' + rooms[i].roomName + '</h3>\
 					<p><span>Starting from:</span><span class="js-accomodation-price">¥ ' + lowestPriceFormatted + '</span><span>/night</span></p>\
-					<a href="#" class="js-book-now">Book Now</a>\
+					<a href="#" class="js-book-now">' + $("#accommodation ul").data("booktext") + '</a>\
 				</li>')
 			}
 
@@ -639,28 +639,44 @@ $('.js-more-photos').on('click', function(e) {
 
 $('.js-tabs-select').on('change', function(e) {	
 	var tabId = $(this).val();
+	if(tabId != ""){
+		$('ul.tabs li').removeClass('current');
+		$('.tab-content').removeClass('current');
 
-	$('ul.tabs li').removeClass('current');
-	$('.tab-content').removeClass('current');
+		$('ul.js-tabs li[data-tab="'+ tabId +'"]').addClass('current');
+		$("#"+tabId).addClass('current');
+		$("#"+tabId).find('.js-tab-slider').slick('setPosition', 0);
+		$("#"+tabId).find('.js-tab-slider-inner').slick('setPosition', 0);
+	}		
+	else{
+		var win = window.open('https://www.naritatokyuwedding.com/', '_blank');
+		$('ul.tabs li').removeClass('current');
+		$('.tab-content').removeClass('current');
+		$(".js-tabs-select").val("tab-1");
+		$('ul.js-tabs li[data-tab="tab-1"]').addClass('current');
+		$("#tab-1").addClass('current');
+		$("#tab-1").find('.js-tab-slider').slick('setPosition', 0);
+		$("#tab-1").find('.js-tab-slider-inner').slick('setPosition', 0);
 
-	$('ul.js-tabs li[data-tab="'+ tabId +'"]').addClass('current');
-	$("#"+tabId).addClass('current');
-	$("#"+tabId).find('.js-tab-slider').slick('setPosition', 0);
-	$("#"+tabId).find('.js-tab-slider-inner').slick('setPosition', 0);
+	}
 });
 
 $('ul.js-tabs li').click(function(){
 
-	var tabId = $(this).attr('data-tab');
-
-	$('ul.js-tabs li').removeClass('current');
-	$('.tab-content').removeClass('current');
-
-	$('.js-tabs-select').val(tabId).trigger('change');
-	$(this).addClass('current');
-	$("#"+tabId).addClass('current');
-	$("#"+tabId).find('.js-tab-slider').slick('setPosition', 0);
-	$("#"+tabId).find('.js-tab-slider-inner').slick('setPosition', 0);
+	if($(this).hasClass("tab-link")){
+		var tabId = $(this).attr('data-tab');
+		$('ul.js-tabs li').removeClass('current');
+		$('.tab-content').removeClass('current');
+		$('.js-tabs-select').val(tabId).trigger('change');
+		$(this).addClass('current');
+		$("#"+tabId).addClass('current');
+		$("#"+tabId).find('.js-tab-slider').slick('setPosition', 0);
+		$("#"+tabId).find('.js-tab-slider-inner').slick('setPosition', 0);
+	}
+	else{
+		var win = window.open('https://www.naritatokyuwedding.com/', '_blank');
+	}
+		
 });
 
 var slickConfig = {
@@ -734,7 +750,7 @@ if($(window).width() > 600){
 }
 
 $('.js-tab-slider-inner').slick({
-  infinite: false,
+  infinite: true,
   speed: 300,
   slidesToShow: 1,
   dots: true,
@@ -835,8 +851,11 @@ $(document).on('click', '.js-book-now', function(e) {
 		date1 = new Date();
 		date2 = new Date();
 	}
-
-	date2.setDate(date2.getDate()  + 1);
+	if (now < selectedDate) {
+		date2.setDate(date2.getDate());
+	}else{
+		date2.setDate(date2.getDate()  + 1);
+	}
 	if(date1.getDate() < 10) {
 		day1Str = '0' + date1.getDate();
 	} else {
@@ -882,11 +901,83 @@ $(document).on('click', '.js-book-now', function(e) {
 		} else if($(e.target).parents('li').data('hotel')) {
 			url = 'https://mystays.rwiths.net/r-withs/tfs0020a.do?&hotelNo='+ $(e.target).parents('li').data('hotel') +'&ciDateY='+ date1.getFullYear() +'&ciDateM='+ month1Str +'&ciDateD='+ day1Str +'&coDateY=' + date2.getFullYear() + '&coDateM=' + month2Str + '&coDateD='+ day2Str +'&otona=2&s1=0&room=1';
 		}
+		else{
+			url = 'https://mystays.rwiths.net/r-withs/tfs0020a.do?&hotelNo='+ property +'&ciDateY='+ date1.getFullYear() +'&ciDateM='+ month1Str +'&ciDateD='+ day1Str +'&coDateY=' + date2.getFullYear() + '&coDateM=' + month2Str + '&coDateD='+ day2Str +'&otona=2&s1=0&room=1';
+		}
 	}
 
 	var win = window.open(url, '_blank');
 		win.focus();
 });
+
+$(document).on('click', '.js-see-all', function(e) {
+	e.preventDefault();
+
+	var url,
+		date1,
+		date2,
+		day1Str,
+		day2Str,
+		month1Str,
+		month2Str,
+		fullDate1,
+		fullDate2,
+		selectedDate = new Date(2018, 1, 1),
+		now = new Date();
+
+	selectedDate.setHours(0,0,0,0);
+	now.setHours(0,0,0,0);
+	if (now < selectedDate) {
+	  	date1 = new Date(2018, 1, 1);
+		date2 = new Date(2018, 1, 2);
+	} else {
+		date1 = new Date();
+		date2 = new Date();
+	}
+
+	date2.setDate(date2.getDate()  + 1);
+	if(date1.getDate() < 10) {
+		day1Str = '0' + date1.getDate();
+	} else {
+		day1Str = date1.getDate();	
+	}
+
+	if((date1.getMonth() +  1) < 10) {
+		month1Str = (date1.getMonth() + 1);
+		month1Str = '0' + month1Str;
+	} else {
+		month1Str = date1.getMonth() + 1;	
+	}
+
+	if(date2.getDate() < 10) {
+		day2Str = '0' + date2.getDate();
+	} else {
+		day2Str = date2.getDate();	
+	}
+
+	if((date2.getMonth() +  1) < 10) {
+		month2Str = (date2.getMonth() + 1);
+		month2Str = '0' + month2Str;
+	} else {
+		month2Str = date2.getMonth() + 1;
+	}
+
+	if(locale === 'en_GB') {
+		fullDate1 = month1Str + '/' + day1Str + '/' + date1.getFullYear();	
+		fullDate2 = month2Str + '/' + day2Str + '/' + date2.getFullYear();	
+
+			url = 'https://reservations.travelclick.com/' + property + '?hotelid=' + property + '&datein=' + fullDate1 + '&dateout=' + fullDate2 + '&rooms=1&adults=2&children=0#/accommodation';
+			
+	} else if(locale === 'ja_JP') {
+		fullDate1 = date1.getFullYear() + '-' + month1Str + '-' + day1Str;	
+		fullDate2 = date2.getFullYear() + '-' + month2Str + '-' + day2Str;	
+		url = 'https://mystays.rwiths.net/r-withs/tfs0020a.do?&hotelNo='+ property +'&ciDateY='+ date1.getFullYear() +'&ciDateM='+ month1Str +'&ciDateD='+ day1Str +'&coDateY=' + date2.getFullYear() + '&coDateM=' + month2Str + '&coDateD='+ day2Str +'&otona=2&s1=0&room=1';
+	}
+
+	var win = window.open(url, '_blank');
+		win.focus();
+});
+
 
 $(document).keyup(function(e) {
      if (e.keyCode == 27) { // escape key maps to keycode `27`
